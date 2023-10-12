@@ -5,39 +5,53 @@
   <meta name="viewport" content="initial-scale=1, width=device-width" />
   <link rel="stylesheet" href="./global.css" />
   <link rel="stylesheet" href="./index.css" />
+  <link rel="stylesheet" href="./media_queries.css" />
+  <script src="./index.js" defer></script>
   <title>Skilled Task</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 <body>
   <header>
-    <nav class="d-flex justify-content-end shadow-sm px-5 py-2">
+    <nav class="justify-content-end shadow-sm px-5 py-2 big-nav">
       <button class="mx-2 px-5 btn btn-sm btn-orange text-white">Case</button>
       <button class="mx-2 px-5 btn btn-sm btn-orange text-white">Demo</button>
       <button class="me-5 px-5 ml-2 btn btn-sm btn-danger">Order</button>
-    </nav>     
+    </nav>
+    <nav class="justify-content-end shadow-sm px-5 py-2 small-nav relative">
+      <button class="me-5 px-5 ml-2 btn btn-sm btn-danger">Order</button>
+      <button class="menu-btn">
+        <img src="./assets/menu.svg" alt="">
+      </button>
+      <div class="bg-white absolute small-nav-options">
+        <div class="border-bottom small-nav-option">
+          <p>Case</p>
+        </div>
+        <div class="small-nav-option">
+          <p>Demo</p>
+        </div>
+      </div>
+    </nav>  
   </header>
 
   <main>
-    <div class="d-flex align-items-center justify-content-end relative">
-      <div class="text-center skilled-text absolute">
+    <div class="d-flex align-items-center justify-content-end landing-image-cont">
+      <div class="skilled-text">
         <h1 class="">SKILLED</h1>
         <button class="btn btn-danger">FREE TRIAL</button>
       </div>
       <div class="skilled-img card">
-        <img src="./assets/img-1.svg" class="" alt="">
+        <img src="./assets/img-1.svg" class="w-100" alt="">
       </div>
     </div>
 
 
-    <div class="d-flex justify-content-start" id="feature">
-      <div class="card">
-        <img src="./assets/img-2.svg" class="relative green-img" alt="">
-      </div>
+    <div class="d-flex justify-content-start relative mt-5" id="feature">
+      <img src="./assets/img-2.svg" class="green-img absolute" alt="">
       <div class="feature-list-cont">
         <h2 class="feature-header">FEATURE</h2>
         <ul class="feature-list">
-          <li class="d-flex align-items-center">
-            <img src="./assets/icon-1.svg" alt="">
+          <li class="d-flex justify-content-start">
+            <img src="./assets/icon-1.svg" alt="" class="feature-point-image">
             <div>
               <h2 class="feature-list-header">POINT 1</h2>
               <p>
@@ -48,7 +62,7 @@
             </div>
           </li>
           <li class="d-flex align-items-center">
-            <img src="./assets/icon-2.svg" alt="">
+            <img src="./assets/icon-2.svg" alt="" class="feature-point-image">
             <div>
               <h2 class="feature-list-header">POINT 2</h2>
               <p>
@@ -59,7 +73,7 @@
             </div>
           </li>
           <li class="d-flex align-items-center">
-            <img src="./assets/icon-3.svg" alt="">
+            <img src="./assets/icon-3.svg" alt="" class="feature-point-image">
             <div>
               <h2 class="feature-list-header">POINT 3</h2>
               <p>
@@ -75,10 +89,10 @@
 
     <div class="my-5 bg-light py-5">
       <div class="function-cont">
-        <h2 class="function-header">FUNCTION</h2>
+        <h2 class="function-header ps-2">FUNCTION</h2>
 
         <div class="d-flex function-list">
-          <div class="card function-list-item bg-white py-3 px-2">
+          <div class="card function-list-item bg-white py-3 px-2 border-none shadow-sm">
             <h2 class="function-list-header">FUNCTION 1</h2>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do 
@@ -87,7 +101,7 @@
 
             <button class="btn btn-orange btn-sm">To etail</button>
           </div>
-          <div class="card function-list-item bg-white py-3 px-2">
+          <div class="card function-list-item bg-white py-3 px-2 border-none shadow-sm">
             <h2 class="function-list-header">FUNCTION 2</h2>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do 
@@ -96,7 +110,7 @@
 
             <button class="btn btn-orange btn-sm">To etail</button>
           </div>
-          <div class="card function-list-item bg-white py-3 px-2">
+          <div class="card function-list-item bg-white py-3 px-2 border-none shadow-sm">
             <h2 class="function-list-header">FUNCTION 3</h2>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do 
@@ -109,7 +123,7 @@
       </div>
     </div>
 
-    <div id="price" class="relative py-5">
+    <div id="price" class="relative">
 
       <!-- diagrams -->
       <img src="./assets/img-8.svg" class="absolute img-1" alt="">
@@ -120,7 +134,7 @@
 
       <!-- tables and text -->
       <div class="mt-5">
-        <h2 class="price-header mb-4 mt-5">PRICE</h2>
+        <h2 class="price-header mb-4 mt-5 font-heavy">PRICE</h2>
 
         <div class="card subscription-card border-none shadow-sm">
           <img src="./assets/triangle-blue.svg" alt="" class="triangle">
@@ -218,12 +232,12 @@
       </div>
 
       <div id="option-plan" class="mt-5">
-        <h2 class="option-plan-header">Option Plan</h2>
+        <h2 class="option-plan-header font-heavy">Option Plan</h2>
 
         <div class="d-flex option-plan-list">
           <div class="card option-plan-list-option shadow-sm">
             <img src="./assets/triangle-green.svg" alt="" class="triangle">
-            <div class="mb-4 mx-5">
+            <div class="option-plan-content-box">
               <h2 class="support-menu-header">Support menu</h2>
               <h6 class="font-heavy my-2">$10 / monthly</h6>
               <p class="font-medium mt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do</p>
@@ -232,7 +246,7 @@
 
           <div class="card option-plan-list-option shadow-sm">
             <img src="./assets/triangle-purple.svg" alt="" class="triangle">
-            <div class="mb-4 mx-5">
+            <div class="option-plan-content-box">
               <h2 class="basic-customize-header">Basic Customize</h2>
               <h6 class="font-heavy my-2">$20 / monthly</h6>
               <p class="font-medium mt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do</p>
@@ -240,7 +254,7 @@
           </div>
           <div class="card option-plan-list-option shadow-sm">
             <img src="./assets/triangle-sky.svg" alt="" class="triangle">
-            <div class="mb-4 mx-5">
+            <div class="option-plan-content-box">
               <h2 class="professional-customize-header">Professional Customize</h2>
               <h6 class="font-heavy my-2">$100 / monthly</h6>
               <p class="font-medium mt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do</p>
@@ -248,7 +262,7 @@
           </div>
           <div class="card option-plan-list-option shadow-sm">
             <img src="./assets/triangle-orange.svg" alt="" class="triangle">
-            <div class="mb-4 mx-5">
+            <div class="option-plan-content-box">
               <h2 class="other-customize-header">Other Customize</h2>
               <h6 class="font-heavy my-2">Contact to us</h6>
               <p class="font-medium mt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do</p>
@@ -264,7 +278,7 @@
       </div>
 
       <div id="operating-env" class="card operating-env-card mt-5">
-        <h2 class="operating-env-header mt-5 mb-4">Operating Environment</h2>
+        <h2 class="operating-env-header mt-5 mb-4 font-heavy ps-4">Operating Environment</h2>
 
         <div class="card operating-env-card p-5 border-none shadow-sm">
           <p class="mb-0">[Operating Environment]</p>
@@ -292,7 +306,6 @@
           <p class="mb-0">Q. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
           <p>A. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
   
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p   > class="mb-0"
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
         </div>
 
@@ -305,7 +318,7 @@
       <div id="compare-plans">
         <h2 class="my-5">Compare Plans</h2>
 
-        <div>
+        <div class="table-cont">
           <table class="table border-none shadow-sm mt-5">
             <thead>
               <tr>
@@ -353,7 +366,7 @@
 
     <div>
       <div id="flow" class="my-5">
-        <h2 class="mt-5 mb-4">Flow</h2>
+        <h2 class="mt-5 mb-4 px-5">Flow</h2>
 
         <div>
           <div class="d-flex my-5">
@@ -366,10 +379,10 @@
             </div>
           </div>
           <div class="d-flex my-5">
-            <img src="./assets/step-2.svg" alt="">
+            <img src="./assets/step-2.svg" alt="" class="mt-5">
             <div class="mt-5 ms-4">
               <h2>STEP 2</h2>
-              <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+              <p class="mb-0 mt-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
             </div>
           </div>
@@ -385,12 +398,14 @@
         </div>
 
         <div class="d-flex justify-content-end">
-          <img src="./assets/img-10.svg" alt="">
+          <img src="./assets/img-10.svg" alt="" class="w-100">
         </div>
       </div>
     </div>
 
-    <div class="bg-light my-5" id="contact">
+    <div class="bg-light my-5 relative overflow-x-hidden" id="contact">
+      <img src="./assets/img-8.svg" alt="" class="absolute green-contact-img">
+      <img src="./assets/img-9.svg" alt="" class="absolute orange-contact-img">
       <div class="card contact-card border-none border-radius-0 shadow-sm px-4 py-5">
         <h2 class="text-center">Contact</h2>
         <div class="dotted-line mt-1"></div>
@@ -415,59 +430,75 @@
             </div>
           </div>
 
-          <div class="d-flex zip-code">
-            <label for=""></label>
-            <input type="text" name="" id="">
-            <label for=""></label>
-            <input type="text" name="" id="">
+          <div class="zip-code ">
+            <div class="input-cont">
+              <label for="zip-code" class="form-label font-heavy">Zip Code <span class="required">*</span></label>
+              <div class="d-flex">
+                <input type="number" name="" id="zip-code" class="form-control zip-code-inp">
+                <input type="number" name="" id="zip-code2" class="form-control zip-code-inp ms-3">
+              </div>
+            </div>
           </div>
 
           <div class="d-flex street-info">
-            <label for="">Prefecture</label>
-            <input type="text" name="" id="">
-            <label for="">Prefecture</label>
-            <input type="text" name="" id="">
-            <label for="">Prefecture</label>
-            <input type="text" name="" id="">
+            <div class="input-cont me-2">
+              <label for="prefecture" class="form-label font-heavy">Prefecture<span class="required">*</span></label>
+              <select name="" id="prefecture" class="form-select">
+                <option value="">1</option>
+                <option value="">2</option>
+                <option value="">3</option>
+              </select>
+            </div>
+            <div class="input-cont ms-2">
+              <label for="street" class="form-label font-heavy">Street <span class="required">*</span></label>
+              <input type="text" name="" id="street" class="form-control">
+            </div>
+            <div class="input-cont">
+              <label for="building" class="form-label font-heavy">Building</label>
+              <input type="text" name="" id="building" class="form-control">             
+            </div>
           </div>
 
-          <div class="order-contents">
-            <label for="">Order Contents</label>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-              <label class="form-check-label" for="inlineCheckbox1">1</label>
+          <div class="order-contents my-5 d-flex">
+            <label class="form-label font-heavy">Order Contents <span class="required">*</span></label>
+            <div class="radio-grp">
+              <div class="form-check-inline px-4 relative">
+                <input class="form-check-input" type="radio" name="order-contents" id="both" value="option1">
+                <img src="./assets/tick.svg" alt="" class="form-check-img absolute">
+                <label class="form-check-label ps-2" for="both">Both</label>
+              </div>
+              <div class="form-check-inline px-4 relative">
+                <input class="form-check-input" type="radio" name="order-contents" id="main-only" value="option2">
+                <img src="./assets/tick.svg" alt="" class="form-check-img absolute">
+                <label class="form-check-label ps-2" for="main-only">Main only</label>
+              </div>
+              <div class="form-check-inline px-4 relative">
+                <input class="form-check-input" type="radio" name="order-contents" id="option-only" value="option3">
+                <img src="./assets/tick.svg" alt="" class="form-check-img absolute">
+                <label class="form-check-label ps-2" for="option-only">Option Only</label>
+              </div>
             </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-              <label class="form-check-label" for="inlineCheckbox2">2</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
-              <label class="form-check-label" for="inlineCheckbox3">3 (disabled)</label>
-            </div>
+          </div>
 
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-              <label class="form-check-label" for="inlineRadio1">1</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-              <label class="form-check-label" for="inlineRadio2">2</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" disabled>
-              <label class="form-check-label" for="inlineRadio3">3 (disabled)</label>
-            </div>
 
-            <label for="">Goods</label>
-            <select name="" id="">
-              <option value=""></option>
-              <option value=""></option>
-              <option value=""></option>
+          <div class="input-cont">
+            <label for="goods" class="form-label font-heavy">Goods <span class="required">*</span></label>
+            <select name="" id="goods" class="form-select">
+              <option value="">1</option>
+              <option value="">2</option>
+              <option value="">3</option>
             </select>
+          </div>
 
-            <label for="">Order Detail</label>
-            <textarea name="" id="" cols="30" rows="5"></textarea>
+          <div class="input-cont w-100">
+            <label for="order-detail" class="form-label font-heavy">Order Detail</label>
+            <textarea name="" id="order-detail" cols="30" rows="5" class="form-control resize-none"></textarea>
+          </div>
+
+          <div class="d-flex justify-content-center align-items-center my-5">
+            <button class="btn btn-lg submit-btn">
+              送信する
+            </button>
           </div>
         </form>
       </div>
